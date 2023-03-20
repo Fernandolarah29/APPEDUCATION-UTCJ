@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es"> 
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Foro</title>
+    <link rel="shortcut icon" href="img/AE.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/estilos.css">
+    
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap" rel="stylesheet"> 
+    <style>
+        input[type=text] {
+          width:100%;
+          padding: 12px 20px;
+          margin: 8px 0;
+          display: inline-block;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+        }
+        
+
+        input[name=comen] {
+          width:100%;
+          padding: 50px 20px;
+          margin: 8px 0;
+          display: inline-block;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing:content-box;
+        }
+        
+        
+        input[type=submit] {
+          width: 30%;
+          background-color: #44ace9;
+          color: white;
+          padding: 14px 20px;
+          margin: 8px 0;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          
+          
+        }
+        
+        input[type=submit]:hover {
+          background-color: #6b19de;
+        }
+
+        .navcomen{
+         
+          overflow: hidden;
+                background-color: #24c351e7;
+                 margin: auto;
+                width: 400px;
+               font-family: Arial, Helvetica, sans-serif;
+        }
+        .navcomen a{
+            background-color: #2aed30b4;
+            color: #ffffff;
+
+           text-decoration: none;
+           padding: 10px 45px;
+            display: block;
+            text-align: center;
+        }
+        .navcomen a:hover {
+    background-color: rgba(8, 190, 236, 0.582);
+    color: black;
+             }
+             .contenidocomen p{
+              text-align: center;
+
+             }
+             .contenedor-sobre-comentarios{
+              text-align: center;
+             }
+             .foro{
+              background-color:#e9e7e7;
+             }
+
+             .Lcontenedor-footer{
+    flex-direction: column;
+    border: none;
+}
+
+.Lcontent-foo{
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.Lcontent-foo a{
+    border: none;
+    color: #209ad3;
+    padding: 10px 100px;
+   
+
+}
+        
+      
+        
+        </style>
+</head>
+
+<body>
+    <header>
+        <section class="Con">
+        <div class ="logo">
+            <img src="img/APE.png" alt="Logo de la empresa">
+        </div>
+        <div class="topnav">
+            <ul class="Nav">
+                <li> <a href="AppEducation.html"><h2>Inicio</h2></a> </li>
+                <li> <a href="MisyVis.html"><h2>Mision y vision</h2></a> </li>
+                <li> <a href="Uni.html" ><h2>Universidades</h2></a> 
+
+                    <ul>
+                        <li> <a href=""><h3>Universidades Publicas</h3></a>
+                            <ul>  
+                             <li><a href="UTCJ.html"><h4>U.Tecnologica de CJ</h4></a></li>
+                             <li><a href="ITCJ.html"><h4>I.Tecnologico de CJ</h4></a></li>
+                             <li><a href="UACJ.html"><h4>U.Autonoma de CJ</h4></a></li>
+                             <li><a href="UAD.html"><h4>U.Autonoma de Durango</h4></a></li>
+                             <li><a href="UPN.html"><h4>.Pedagogica Nacional</h4>U</a></li>
+                           </ul>
+                       </li>
+                   
+                      
+                       <li><a href=""><h3>Universidades Privadas</h3></a>
+                         <ul>  
+                          <li><a href="T.Milenio.html"><h4>Univerdidad Tec Milienio</h4></a></li>
+                          <li><a href="T.Monterey.html"><h4>Tecnologico de Monterrey</h4></a></li>
+                          <li><a href="Cultural.html"><h4>Universidad Cultural</h4></a></li>
+                        </ul>
+                        </li>
+                     </ul>
+                </li>
+
+                <li> <a href="foro.html" ><h2>Foro</h2></a> 
+
+                  <ul>
+                      <li> <a href="comentarios"><h3>Comentarios</h3></a></li>
+                   </ul>
+              </li>
+           </ul>       
+
+        </div>
+      
+        <section class="textos-header">
+            <h1>Comparte tu opinion</h1>
+            <h2>App Education Inovando tus estudios...</h2>
+        </section>
+        <div class="wave" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
+                style="height: 100%; width: 100%;">
+                <path d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                    style="stroke: none; fill: #fff;"></path>
+            </svg></div>
+        </section>
+    </header>
+
+
+
+
+
+
+
+
+        <body>
+          <main>
+            <section class="contenedor sobre-nosotros">
+                <h2 class="titulo">Foro</h2>
+                <div class="contenedor-sobre-nosotros">
+                    
+                    <div class="contenido-textos">
+                        <h3><span>1</span>Tu opinión es muy importante</h3>
+                        <p>En App Education nos complace aceptar tus comentarios, es por ello que hemos decidido
+                          que tu estudiante, tu alumno, o tu institución, tengan un espacio para poder compartir cualquier
+                          tipo de comentario ya sea bueno o malo, sin embargo te solicitamos ser respetuoso y aceptar la
+                          opinion de todos los participantes. Cualquier duda favor de mandar correo a info@app-educationJR.mx
+                          y con gusto te atenderemos.
+                        </p>
+                        <img src="img/opinion.jpg" alt="" class="imagen-about-uss">
+                    </div>
+                </div>
+            </section>
+          </main>
+
+
+
+
+        <section class ="foro">
+          <section class="contenidocomen"><h2 class="titulo">Caja de comentarios</h2>
+            
+            <div class="contenedor-sobre-comentarios">
+       
+          <form action="/foro">
+           
+            <label for="fname">Nombre</label>
+            <input type="text" id="username" name="username" placeholder="Ingresa tu nombre">
+          
+      
+        
+            <label for="lname">Genera tu comentario</label>
+            <input type="text" id="comen" name="comen" placeholder="Ingresa tu comentario o sugerencia">
+            <br> <br> 
+            <label for="lname">Estatus</label>
+            <select type="text" id="status" name="status" placeholder="Ingresa tu estatus">
+              <option value="Aspirante">Aspirante</option>
+              <option value="Alumno">Alumno</option>
+              <option value="Institucion">Institucion</option>
+              <option value="Docente">Docente</option>
+
+            </select>
+            <br> <br>
+            <label for="lname">Instituicion</label>
+            <input list="ice-cream-flavors" id="inst" name="inst" placeholder="Ingresa tu institucion">
+            <datalist id="ice-cream-flavors">
+                <option value="ITCJ">
+                <option value="UTCJ">
+                <option value="UACJ">
+                <option value="UAD">
+                <option value="UPN">
+                <option value="Tec. Milenio">
+                <option value="Tec. Monterrey">
+                <option value="Cultural">
+                
+
+                       
+            </datalist>
+            <br> <br> 
+            <label for="lname">Recomendacion</label>
+            <select type="int" id="recom" name="recom" placeholder="Recomendacion de 1-10 de esta institucion">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+
+            </select>
+        <br>  <br> <br>
+            <input type="submit" value="Genera Comentario">
+          </form>
+        </div>
+      </section>
+    </section>
+
+    <main>
+      <section class="contenedor sobre-nosotros">
+        <h2 class="titulo">Quieres saber que opinan los demas?</h2>
+          <div class="contenedor-sobre-nosotros">
+              
+              <div class="contenido-textos">
+                  <h3><span>2</span>Conoce mas con ayuda de expertos!!</h3>
+                  <p>
+                    Da clic en el siguiente enlace y enterate de las reseñas de tu institución favorita
+                    hechas por alumnos, aspirantes, maestros e instituciones educativas.
+                  </p>
+                  
+              </div>
+          </div>
+          <br>
+          <br>
+          <br>
+             <div class="navcomen">
+             
+             <a href="comentarios"><h2>Comentarios</h2></a>
+             </div>
+      </section>
+    </main>
+          
+         
+                     
+
+  
+      
+
+  
+
+    
+
+        
+        
+        
+    <footer>
+        <div class="contenedor-footer">
+            <div class="content-foo">
+                <h4>Telefono</h4>
+                <p>8296312</p>
+            </div>
+            <div class="content-foo">
+                <h4>Email</h4>
+                <p>info@app-educationJR.mx</p>
+            </div>
+            <div class="content-foo">
+                <h4>Localizacion</h4>
+                <p>Ciudad Juarez</p>
+            </div>
+        </div>
+        <div class="Lcontenedor-footer">
+          <div class="Lcontent-foo">
+              <a href="Uni.html">Pag. Anterior</a>
+              <a href="foro.html">Inicio</a>
+              <a href="AppEducation.html">Pag. Siguiente</a>
+          </div>
+          <h2 class="titulo-final">&copy; F.Lara | S. Ruiz | D.Flores</h2>>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+ 
+
+    <title>UACJ</title>
+    <style>
+
+        
+/* -------------------------------------CARRUSEL------------------------------------- */
+a{
+    text-decoration: none;
+}
+.Carousel{
+    width: 100%;
+    margin: 0px -20px;
+}
+.Carousel h2{
+    font-size: 26px;
+    line-height: 38px;
+    padding-bottom: 24px;
+    opacity: .9;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    text-align: center;
+}
+
+/* images */
+
+.slick-list{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    height: 304px;
+    padding: 10px 0px;
+    margin: 0px auto;
+    max-width: 90vw;
+    overflow: hidden;
+}
+.slick-track{
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    transition: .5s ease-in-out;
+}
+.slick{
+    position: relative;
+    width: 275px;
+    padding: 0 18px;
+    float: left;
+    box-sizing: border-box;
+    display: flex;
+    height: 100%;
+}
+.slick h4{
+    position: absolute;
+    z-index: 1;
+    font-size: 22px;
+    line-height: 23px;
+    color: rgb(0, 0, 0);
+    padding: 15px;
+}
+.slick h4 small{
+    font-size: 15px;
+    display: block;
+}
+.slick a img{
+    object-fit: cover;
+    height: 300px;
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.5);
+    transition: .3s ease-in-out;
+}
+.slick a img:hover{
+    opacity: .85;
+}
+
+/* buttons */
+
+.slick-arrow{
+    border-radius: 30px;
+    background-color: #fff;
+    position: absolute;
+    z-index: 4;
+    width: 48px;
+    height: 48px;
+    text-align: center;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.15);
+    border: 0;
+    cursor: pointer;
+}
+.slick-arrow:focus{
+    outline: 0;
+}
+.slick-arrow svg{
+    width: 12px;
+    height: 100%;
+    color: rgba(0,0,0,.7);
+}
+.slick-prev{
+    left: 0px;
+}
+.slick-next{
+    right: 0px;
+}
+/* -------------------------------------CARRUSEL------------------------------------- */
+
+
+
+/* -------------------------------------PAGINA TEC------------------------------------- */
+
+
+
+
+       
+        
+        body {
+          font-family: Arial;
+          padding: 5px;
+          background: #243ddeb6;
+        }
+        
+        /* Header/Blog Title */
+        .header {
+          padding: 50px;
+          text-align: center;
+          background: white;
+        }
+        
+        .header h1 {
+          font-size: 30px;
+        }
+        .header P {
+          font-size: 20px;
+        }
+        
+        /* Style the topnav links */
+        .topnav a {
+          float: left;
+          display: block;
+          color: #e03aaf;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+        }
+        
+        /* Change color on hover */
+        .topnav a:hover {
+          background-color: rgb(146, 94, 17);
+          color: black;
+        }
+        
+        /* Create two unequal columns that floats next to each other */
+        /* Left column */
+
+        
+        /* Fake image */
+      
+        .gallery:hover {
+          border: 1px solid rgb(27, 8, 134);
+        
+        }
+        
+        
+        
+        /* Add a card effect for articles */
+        .card {
+          background-color: white;
+          padding: 20px;
+          margin-top: 20px;
+          border: 1px solid black;
+        }
+        
+      
+        
+        /* Footer */
+        .footer {
+          padding: 20px;
+          text-align: center;
+          background: #ddd;
+          margin-top: 20px;
+        }
+        
+        /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+     
+        
+        /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+       
+        table{
+        background-color: white;
+        text-align: left;
+        border-collapse: collapse;
+        width: 100%;
+       }
+
+        td,th{
+              
+              padding: 20px;   
+            
+            }
+    thead{
+        background-color: #246355;
+        border-bottom: solid 5px #0F362D;
+        color: white;
+  }
+  tr:nth-child(even){
+    background-color: #ddd;
+  }
+  tr:hover td{
+    background-color:#369681 ;
+    color: white;
+  }
+/* -------------------------------------PAGINA TEC------------------------------------- */
+        
+         
+/* -------------------------------------BOTON NAV------------------------------------- */
+
+        .container, .button, .nav{
+            position: fixed;
+        }
+        
+        .container{
+            margin: auto;
+            top: 90%;
+            left: 95%;
+            margin-left: 10px;
+        }
+        
+        #toggle{
+            display: none;
+        }
+        
+        .button{
+            z-index: 999;
+            width: 43px;
+            height: 43px;
+            background: #4998f3;
+            border-radius: 100%;
+            transition: all 0.5s ease-in-out;
+            box-shadow: 1px 3px 10px 0 rgba(0,0,0,0.3);
+            cursor: pointer;
+        }
+        
+        .button:before{
+            position: absolute;
+            top: 20px;
+            left: 9px;
+            content: '';
+            width: 25px;
+            height: 2px;
+            background: #fff;
+            transform: rotate(90deg);
+        }
+        
+        .button:after{
+            position: absolute;
+            top: 20px;
+            left: 9px;
+            content: '';
+            width: 25px;
+            height: 2px;
+            background: #fff;
+        }
+        
+        .nav{
+            transform: translateY(10%);
+            opacity: 0;
+            top: 400px;
+            left: 1100px;
+            transition: all 0.5s ease-in-out;
+            background: rgba(15, 83, 208, 0.497);
+            width: 200px;
+            border-radius: 5px;
+            transform: translateY(0%);
+            box-shadow: 2px 3px 10px 0 rgba(0,0,0,0.1);
+        }
+        
+        
+        .nav a{
+            text-align: center;
+            display: block;
+            margin: 20px 0;
+            color: #ffffff;
+            text-decoration: none;
+            font-family: sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: all 300ms;
+        }
+        
+        .nav a:hover{
+          background-color: #000000;
+            color: #11f7b2;
+        }
+        
+        #toggle:checked ~ .nav{
+            opacity: 1;
+            transform: translateX(-30%);
+        }
+        
+        #toggle:checked ~ .button{
+            transform: rotate(135deg);
+            box-shadow: 0 0 0 0 transparent;
+        }
+
+        .Lcontenedor-footer{
+    flex-direction: column;
+    border: none;
+}
+
+.Lcontent-foo{
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.Lcontent-foo a{
+    border: none;
+    color: #209ad3;
+    padding: 10px 100px;
+   
+
+}
+
+/* -------------------------------------BOTON NAV------------------------------------- */
+        
+        
+        </style>
+</head>
+<body>
+    <div class="headerEsc"> 
+       
+            <div class ="logo">
+                <a href="AppEducation.html">
+                <img src="img/APE.png" alt="Logo de la empresa">   </a>
+                
+                </div>
+                <div class="logo2">
+                    <a href="https://www.uacj.mx/">
+                        <img src="img/img3.png" alt="Logo de la empresa" > 
+                    </a>
+                 
+
+                </div>
+
+       
+        
+    </div>
+      <div cl ass="row">     
+          <div class="card">         
+    <div class="Carousel">
+        <h2>Universidad autonoma de Ciudad Juárez</h2>
+        <div class="slick-list" id="slick-list">
+            <button class="slick-arrow slick-prev" id="button-prev" data-button="button-prev" onclick="app.processingButton(event)">
+                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-left" class="svg-inline--fa fa-chevron-left fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"></path></svg>
+            </button>
+            <div class="slick-track" id="track">
+                <div class="slick">
+                    <div>
+                        <a href="img/1ua.jpg">
+                            <h4><small>UACJ</small>Ver</h4>
+                            <picture>
+                                <img src="img/1ua.jpg" alt="Image">
+                            </picture>
+                        </a>
+                    </div>
+                </div>
+                <div class="slick">
+                    <div>
+                        <a href="img/2ua.jpg">
+                            <h4><small>UACJ</small>Ver</h4>
+
+                            <picture>
+                                <img src="img/2ua.jpg" alt="Image">
+                            </picture>
+                        </a>
+                    </div>
+                </div>
+                <div class="slick">
+                    <div>
+                        <a href="img/3ua.jpg">
+                            <h4><small>UACJ</small>Ver</h4>
+
+                            <picture>
+                                <img src="img/3ua.jpg" alt="Image">
+                            </picture>
+                        </a>
+                    </div>
+                </div>
+                <div class="slick">
+                    <div>
+                        <a href="img/4ua.jpg">
+                            <h4><small>UACJ</small>Ver</h4>
+                            <picture>
+                                <img src="img/4ua.jpg" alt="Image">
+                            </picture>
+                        </a>
+                    </div>
+                </div>
+                <div class="slick">
+                    <div>
+                        <a href="img/5ua.jpg">
+                            <h4><small>UACJ</small>Ver</h4>
+                            <picture>
+                                <img src="img/5ua.jpg" alt="Image">
+                            </picture>
+                        </a>
+                    </div>
+                </div>
+                <div class="slick">
+                    <div>
+                        <a href="img/6ua.jpg">
+                            <h4><small>UACJ</small>Ver</h4>
+                            <picture>
+                                <img src="img/6ua.jpg" alt="Image">
+                            </picture>
+                        </a>
+                    </div>
+                </div>
+                <div class="slick">
+                    <div>
+                        <a href="img/8ua.jpg">
+                            <h4><small>UACJ</small>Ver</h4>
+                            <picture>
+                                <img src="img/8ua.jpg" alt="Image">
+                            </picture>
+                        </a>
+                    </div>
+                </div>
+                <div class="slick">
+                    <div>
+                        <a href="img/7ua.jpg">
+                            <h4><small>UACJ</small>Ver</h4>
+                            <picture>
+                                <img src="img/7ua.jpg" alt="Image">
+                            </picture>
+                        </a>
+                    </div>
+                </div>
+               
+              
+                
+               
+                
+               
+               
+            </div>
+            <button class="slick-arrow slick-next" id="button-next" data-button="button-next" onclick="app.processingButton(event)">
+                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" class="svg-inline--fa fa-chevron-right fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path></svg>
+            </button>
+        </div>
+    </div>
+    <script defer src="main.js"></script>
+
+    <div class="card">
+        <h2>Información de institución</h2>
+        <p>
+            <h4>Dirección: Manuel Díaz H. No. 518-B Zona Pronaf Condominio, 32315 Cd Juárez, Chih.</h4>
+            <h4>Costo: Ficha de admisión 700 pesos y costo de semestre aproximado 3050.</h4>
+            <h4>Duración: Dependerá de la carrera elegida, normalmente es de 3 años a 4 años y medio.</h4>
+            <h4>Horario: de 7am a 10 pm, depende la hora en que te toquen las clases.</h4>
+    
+  
+      </p>
+      </div>
+      </div>
+       
+  
+  
+      <div class="card">
+        <h2>Oferta educativa</h2>
+        <h3>Agrupada por departamentos, se muestran acontinuacion las carreras de la UACJ</h3>
+          <ol>
+            <h5>DEPARTAMENTO DE CIENCIAS DE LA SALUD:</h5>
+            <li>Licenciatura en Enfermería</li>
+            <li>Licenciatura en Entrenamiento Deportivo </li>
+            <li>Licenciatura en Médico Cirujano </li>
+            <li>Licenciatura en Nutrición </li>
+            <li>Licenciatura en Gerontología </li>
+            <li>Maestría en Salud Pública </li>
+    
+            <h5>DEPARTAMENTO DE CIENCIAS QUIMICO BIOLOGICAS:</h5>
+            <li>Licenciatura en Biología</li>
+            <li>Licenciatura en Química</li>
+            <li>Licenciatura en Químico Farmacéutico Biólogo </li>
+            <li>Licenciatura en Biotecnología  </li>
+            <li>Maestría en Ciencias Orientación Genómica  </li>
+            <li>Maestría en Ciencias Químico-Biológicas  </li>
+            <li>Doctorado en Ciencias Químico Biológicas  </li>
+    
+            <h5>DEPARTAMENTO DE CIENCIAS VETERINARIAS:</h5>
+            <li>Licenciatura en Médico Veterinario Zootecnista</li>
+            <li>Especialidad en Medicina y Cirugía en Pequeñas Especies</li>
+            <li>Maestría en Ciencia Animal</li>
+    
+            <h5>DEPARTAMENTO DE ESTOMATOLOGIA:</h5>
+            <li>Licenciatura en Cirujano Dentista</li>
+            <li>Especialidad en Endodoncia </li>
+            <li>Especialidad en Odontopediatría</li>
+            <li>Especialidad en Ortodoncia </li>
+            <li>Especialidad en Periodoncia </li>
+            <li>Especialidad en Prótesis Bucal Fija y Removible </li>
+            <li>Especialidad en Patología y Medicina Bucal</li>
+            <li>Maestría en Ciencias Odontológicas </li>
+            
+            <h5>DEPARTAMENTO DE ARQUITECTURA DISEÑO Y ARTE:</h5>
+            <li>Licenciatura en Arquitectura.</li>
+            <li>Licenciatura en Artes Visuales.</li>
+            <li>Licenciatura en Música.</li>
+            <li>Licenciatura en Diseño de Interiores.</li>
+            <li>Licenciatura en Diseño Gráfico.</li>
+    
+            <h5>DEPARTAMENTO DE CIENCIAS SOCIALES Y ADMINISTRATIVAS:</h5>
+            <li>Licenciatura en Publicidad.</li>
+            <li>Licenciatura en Administración de Empresas.</li>
+            <li>Licenciatura en Periodismo.</li>
+            <li>Licenciatura en Derecho.</li>
+    
+            <h5>DEPARTAMENTO DE INGENIERIA Y TECNOLOGIA:</h5>
+            <li>Ingeniería Eléctrica.</li>
+            <li>Ingeniería en Sistemas Computacionales.</li>
+            <li>Ingeniería en Sistemas Digitales y Comunicaciones.</li>
+            <li>Ingeniería de Software e informática.</li>
+            <li>Ingeniería Aeronáutica.</li>
+          </ol>
+          <h3>Con estos datos nos damos cuenta que la UACJ nos ofrece 38 opciones de carreras, entre ellas licenciaturas, ingenierias, especialidades y maestrias</h3>
+          </div>
+           <div class="card">
+
+            <h2>BECAS</h2>
+            <table>
+                
+                
+                <thead>
+                    <tr>
+                        <th >SOCIOECONOMICA</th>
+                        <th >DISCAPACIDAD</th>
+                        <th>ORFANDAD</th>
+                        <th >ETNIAS</th> 
+                        <th >ACADEMICA</th> 
+
+                    </tr>
+                  </thead> 
+        
+          <tr >
+              <td >Alumnos que tienen problemas economicos para mantenerse estudiando.</td>
+              <td >Alumnos que no cuentan con sus capacidades fisicas o motoras.</td>
+              <td >Alumnos que perdieron al tutor o padres</td>
+              <td >Alumnos que formen parte de alguna etnia</td> 
+              <td >Alumnos con excelencia academica</td>  
+          </tr>
+        </table>
+      
+    </div><br><br>
+  
+  
+  <div class="container">
+ 
+    <input type="checkbox" id="toggle">
+    <label for="toggle" class="button"></label>
+  
+    <nav class="nav">
+        
+        <a href="ITCJ.html">Anterior</a>
+        <a href="Uni.html">Universidades</a>
+        <a href="UAD.html">Siguiente</a>
+    </nav>
+  
+  </div>
+
+  <footer>
+    <div class="contenedor-footer">
+        <div class="content-foo">
+            <h4>Telefono</h4>
+            <p>8296312</p>
+        </div>
+        <div class="content-foo">
+            <h4>Email</h4>
+            <p>info@app-educationJR.mx</p>
+        </div>
+        <div class="content-foo">
+            <h4>Localizacion</h4>
+            <p>Ciudad Juarez</p>
+        </div>
+    </div>
+   
+    
+        <h2 class="titulo-final">&copy; F.Lara | S. Ruiz | D.Flores</h2>
+    
+
+</footer>
+
+
+
+
+
+
+
+
+</body>
+</html>

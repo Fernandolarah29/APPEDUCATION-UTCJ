@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Subcategory Carousel</title>
+    <style>
+
+        
+/* -------------------------------------CARRUSEL------------------------------------- */
+a{
+    text-decoration: none;
+}
+.Carousel{
+    width: 100%;
+    margin: 0px -20px;
+}
+.Carousel h2{
+    font-size: 26px;
+    line-height: 38px;
+    padding-bottom: 24px;
+    opacity: .9;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    text-align: center;
+}
+
+/* images */
+
+.slick-list{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    height: 304px;
+    padding: 10px 0px;
+    margin: 0px auto;
+    max-width: 90vw;
+    overflow: hidden;
+}
+.slick-track{
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    transition: .5s ease-in-out;
+}
+.slick{
+    position: relative;
+    width: 275px;
+    padding: 0 18px;
+    float: left;
+    box-sizing: border-box;
+    display: flex;
+    height: 100%;
+}
+.slick h4{
+    position: absolute;
+    z-index: 1;
+    font-size: 22px;
+    line-height: 23px;
+    color: #fff;
+    padding: 15px;
+}
+.slick h4 small{
+    font-size: 15px;
+    display: block;
+}
+.slick a img{
+    object-fit: cover;
+    height: 300px;
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.5);
+    transition: .3s ease-in-out;
+}
+.slick a img:hover{
+    opacity: .85;
+}
+
+/* buttons */
+
+.slick-arrow{
+    border-radius: 30px;
+    background-color: #fff;
+    position: absolute;
+    z-index: 4;
+    width: 48px;
+    height: 48px;
+    text-align: center;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.15);
+    border: 0;
+    cursor: pointer;
+}
+.slick-arrow:focus{
+    outline: 0;
+}
+.slick-arrow svg{
+    width: 12px;
+    height: 100%;
+    color: rgba(0,0,0,.7);
+}
+.slick-prev{
+    left: 0px;
+}
+.slick-next{
+    right: 0px;
+}
+/* -------------------------------------CARRUSEL------------------------------------- */
+
+
+
+/* -------------------------------------PAGINA TEC------------------------------------- */
+
+
+
+
+        * {
+          box-sizing: border-box;
+        }
+        
+        body {
+          font-family: Arial;
+          padding: 30px;
+          background: #d9574c;
+        }
+        
+        /* Header/Blog Title */
+        .header {
+          padding: 50px;
+          text-align: center;
+          background: white;
+        }
+        
+        .header h1 {
+          font-size: 30px;
+        }
+        .header P {
+          font-size: 20px;
+        }
+        
+        /* Style the topnav links */
+        .topnav a {
+          float: left;
+          display: block;
+          color: #e03aaf;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+        }
+        
+        /* Change color on hover */
+        .topnav a:hover {
+          background-color: rgb(146, 94, 17);
+          color: black;
+        }
+        
+        /* Create two unequal columns that floats next to each other */
+        /* Left column */
+
+        
+        /* Fake image */
+      
+        .gallery:hover {
+          border: 1px solid rgb(27, 8, 134);
+        
+        }
+        
+        
+        
+        /* Add a card effect for articles */
+        .card {
+          background-color: white;
+          padding: 20px;
+          margin-top: 20px;
+          border: 1px solid black;
+        }
+        
+      
+        
+        /* Footer */
+        .footer {
+          padding: 20px;
+          text-align: center;
+          background: #ddd;
+          margin-top: 20px;
+        }
+        
+        /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+     
+        
+        /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+       
+        table,tr,td,th{
+              border: 1px solid black;
+              border-collapse: collapse;    
+            
+            }
+            tr,th,td{
+        
+              text-align: center
+              
+            }
+            td,th{
+                font-style: italic;
+                font-weight: bold;
+            }
+/* -------------------------------------PAGINA TEC------------------------------------- */
+        
+         
+/* -------------------------------------BOTON NAV------------------------------------- */
+
+        .container, .button, .nav{
+            position: fixed;
+        }
+        
+        .container{
+            margin: auto;
+            top: 50%;
+            left: 95%;
+            margin-left: -20px;
+        }
+        
+        #toggle{
+            display: none;
+        }
+        
+        .button{
+            z-index: 999;
+            width: 43px;
+            height: 43px;
+            background: #f28482;
+            border-radius: 100%;
+            transition: all 0.5s ease-in-out;
+            box-shadow: 1px 3px 10px 0 rgba(0,0,0,0.3);
+            cursor: pointer;
+        }
+        
+        .button:before{
+            position: absolute;
+            top: 20px;
+            left: 9px;
+            content: '';
+            width: 25px;
+            height: 2px;
+            background: #fff;
+            transform: rotate(90deg);
+        }
+        
+        .button:after{
+            position: absolute;
+            top: 20px;
+            left: 9px;
+            content: '';
+            width: 25px;
+            height: 2px;
+            background: #fff;
+        }
+        
+        .nav{
+            transform: translateY(10%);
+            opacity: 0;
+            top: 400px;
+            left: 1470px;
+            transition: all 0.5s ease-in-out;
+            background: rgba(208, 15, 79, 0.497);
+            width: 150px;
+            border-radius: 5px;
+            transform: translateY(0%);
+            box-shadow: 2px 3px 10px 0 rgba(0,0,0,0.1);
+        }
+        
+        
+        .nav a{
+            text-align: center;
+            display: block;
+            margin: 20px 0;
+            color: #ffffff;
+            text-decoration: none;
+            font-family: sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: all 300ms;
+        }
+        
+        .nav a:hover{
+          background-color: #000000;
+            color: #11f7b2;
+        }
+        
+        #toggle:checked ~ .nav{
+            opacity: 1;
+            transform: translateX(-30%);
+        }
+        
+        #toggle:checked ~ .button{
+            transform: rotate(135deg);
+            box-shadow: 0 0 0 0 transparent;
+        }
+/* -------------------------------------BOTON NAV------------------------------------- */
+        
+        
+        </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Instituto Tecnologico de Cd Juarez</h1>
+        <p>Casa de las Liebres</p>
+        
+      </div>
+      
+      
+      <div cl ass="row">
+        
+          <div class="card">
+            <h2>ITCJ</h2>
+
+    <div class="Carousel">
+        <h2>Instituto Tecnologico de Ciudad Juarez</h2>
+        <div class="slick-list" id="slick-list">
+            <button class="slick-arrow slick-prev" id="button-prev" data-button="button-prev" onclick="app.processingButton(event)">
+                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-left" class="svg-inline--fa fa-chevron-left fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"></path></svg>
+            </button>
+            <div class="slick-track" id="track">
+                <div class="slick">
+                    <div>
+                        <a href="/">
+                            <h4><small>Share Your Message</small>Watch</h4>
+                            <picture>
+                                <img src="./images/1.jpg" alt="Image">
+                            </picture>
+                        </a>
+                    </div>
+                </div>
+                <div class="slick">
+                    <div>
+                        <a href="/">
+                            <h4><small>Share Your Message</small>Watch</h4>
+                            <picture>
+                                <img src="./images/2.jpg" alt="Image">
+                            </picture>
+                        </a>
+                    </div>
+                </div>
+                <div class="slick">
+                    <div>
+                        <a href="/">
+                            <h4><small>Share Your Message</small>Watch</h4>
+                            <picture>
+                                <img src="./images/3.jpg" alt="Image">
+                            </picture>
+                        </a>
+                    </div>
+                </div>
+                <div class="slick">
+                    <div>
+                        <a href="/">
+                            <h4><small>Share Your Message</small>Watch</h4>
+                            <picture>
+                                <img src="./images/4.jpg" alt="Image">
+                            </picture>
+                        </a>
+                    </div>
+                </div>
+                <div class="slick">
+                    <div>
+                        <a href="/">
+                            <h4><small>Share Your Message</small>Watch</h4>
+                            <picture>
+                                <img src="./images/5.jpg" alt="Image">
+                            </picture>
+                        </a>
+                    </div>
+                </div>
+                <div class="slick">
+                    <div>
+                        <a href="/">
+                            <h4><small>Share Your Message</small>Watch</h4>
+                            <picture>
+                                <img src="./images/6.jpg" alt="Image">
+                            </picture>
+                        </a>
+                    </div>
+                </div>
+                <div class="slick">
+                    <div>
+                        <a href="/">
+                            <h4><small>Share Your Message</small>Watch</h4>
+                            <picture>
+                                <img src="./images/7.jpg" alt="Image">
+                            </picture>
+                        </a>
+                    </div>
+                </div>
+                <div class="slick">
+                    <div>
+                        <a href="/">
+                            <h4><small>Share Your Message</small>Watch</h4>
+                            <picture>
+                                <img src="./images/8.jpg" alt="Image">
+                            </picture>
+                        </a>
+                    </div>
+                </div>
+                <div class="slick">
+                    <div>
+                        <a href="/">
+                            <h4><small>Share Your Message</small>Watch</h4>
+                            <picture>
+                                <img src="./images/9.jpg" alt="Image">
+                            </picture>
+                        </a>
+                    </div>
+                </div>
+                <div class="slick">
+                    <div>
+                        <a href="/">
+                            <h4><small>Share Your Message</small>Watch</h4>
+                            <picture>
+                                <img src="./images/10.jpg" alt="Image">
+                            </picture>
+                        </a>
+                    </div>
+                </div>
+                <div class="slick">
+                    <div>
+                        <a href="/">
+                            <h4><small>Share Your Message</small>Watch</h4>
+                            <picture>
+                                <img src="./images/11.jpg" alt="Image">
+                            </picture>
+                        </a>
+                    </div>
+                </div>
+                <div class="slick">
+                    <div>
+                        <a href="/">
+                            <h4><small>Share Your Message</small>Watch</h4>
+                            <picture>
+                                <img src="./images/12.jpg" alt="Image">
+                            </picture>
+                        </a>
+                    </div>
+                </div>
+                <div class="slick">
+                    <div>
+                        <a href="/">
+                            <h4><small>Share Your Message</small>Watch</h4>
+                            <picture>
+                                <img src="./images/13.jpg" alt="Image">
+                            </picture>
+                        </a>
+                    </div>
+                </div>
+                <div class="slick">
+                    <div>
+                        <a href="/">
+                            <h4><small>Share Your Message</small>Watch</h4>
+                            <picture>
+                                <img src="./images/14.jpg" alt="Image">
+                            </picture>
+                        </a>
+                    </div>
+                </div>
+                <div class="slick">
+                    <div>
+                        <a href="/">
+                            <h4><small>Share Your Message</small>Watch</h4>
+                            <picture>
+                                <img src="./images/15.jpg" alt="Image">
+                            </picture>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <button class="slick-arrow slick-next" id="button-next" data-button="button-next" onclick="app.processingButton(event)">
+                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" class="svg-inline--fa fa-chevron-right fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path></svg>
+            </button>
+        </div>
+    </div>
+    <script defer src="main.js"></script>
+
+    <div class="card">
+        <h2>Informacion de institucion</h2>
+        <p>
+          <h5>Dirección: Av. Tecnológico 1340, Fuentes del Valle, 32500 Cd Juárez, Chih.</h5>
+          <h5>Costo: El costo de la ficha de admisión seria de 420 pesos y de inscripción de 2600 pesos</h5>
+          <h5>Duración: Puedes tomar las materias que quieras pero solo tienes 12 semestres para cubrir tu plan de estudio. </h5>
+          <h5>Horario: Dependerá de las clases que agarres, en un horario de 8AM a 10PM</h5>
+  
+      </p>
+      </div>
+      </div>
+       
+  
+  
+  
+      <div class="card">
+      <h2>Oferta educativa</h2>
+       <h6> Agrupada por departamentos, se muestran acontinuacion las carreras del Instituto Tecnologico de Ciudad Juarez</h6>
+        <ol>
+          <h5>Departamento de ingenierias </h5>
+          <li> ING.ELECTROMECANICA</li>
+          <li> ING. MECANICA</li>
+          <li> ING. EN SISTEMAS COMPUTACIONALES</li>
+          <li> ING. EN ELECTRONICA </li>
+          <li> ING. TECNOLOGIAS DE LA INFORMACION Y COMUNICACION</li>
+          <li> ING. EN GESTION EMPRESARIAL</li>
+          <li>ING. ELECTRICA </li>
+          <li>ING.INDUSTRIAL</li>
+          <li>ING. EN LOGISTICA</li>
+          <li>ING. EN MECATRONICA</li>
+  
+          <h5> Departamento de licenciaturas</h5>
+          <li>LIC. EN ADMINISTRACION DE EMPRESAS</li>
+          <li>LIC. EN CONTADOR PUBLICO</li>
+          
+        <h5> Con estos datos nos damos cuenta que el TEC DE JUAREZ os ofrece 12 opciones de carreras, entre ellas licenciaturas y ingenierias </h5>
+        </div>
+         <div class="card">
+   
+      <table>
+          
+          <h1>BECAS </h1>
+        <tr >
+            <td >ACADEMICAS</td>
+            <td >ECONOMICAS</td>
+            <td >Jovenes escribiendo el futuro</td>
+            <td >TRANSPORTE</td> 
+            
+        </tr>
+        <tr >
+            <td >Alumnos que cuentan con buen desempeño academico</td>
+            <td >Alumnos que tienen problemas economicos</td>
+            <td >Becas que ofrece el gobierno dirigida a alumnos</td>
+            <td >Alumnos que tienen problemas de transporte</td> 
+        </tr>
+      </table>
+    
+  </div>
+  
+  
+  <div class="container">
+  <P>Da clic si deseas cambiar de pagina</P>
+    <input type="checkbox" id="toggle">
+    <label for="toggle" class="button"></label>
+  
+    <nav class="nav">
+        
+        <a href="#">Anterior</a>
+        <a href="Uni.html">Universidads</a>
+        <a href="#">Siguiente</a>
+    </nav>
+  
+  </div>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
